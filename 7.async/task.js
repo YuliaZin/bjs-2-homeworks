@@ -33,7 +33,7 @@ class AlarmClock {
 
     let finish = this.alarmCollection.length;
 
-    return (start > finish ) ? true : false;
+    return start > finish;
     
     }
 
@@ -47,7 +47,7 @@ class AlarmClock {
 
     start() {
       const checkClock = (callTime) => {
-        if (callTime.clockTime === this.getCurrentFormattedTime()) {
+        if (callTime.time === this.getCurrentFormattedTime()) {
           callTime.callback();
         }
     };
